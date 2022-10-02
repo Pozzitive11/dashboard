@@ -13,8 +13,10 @@ body {
 }
 
 .left {
-  width: 306px;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 21.25%;
+  min-height: 100vh;
   background: #ffffff;
   box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
   margin-right: 71px;
@@ -24,7 +26,7 @@ body {
 .logo {
   display: flex;
   align-items: end;
-  margin-top: 36px;
+  margin-top: 35px;
   margin-bottom: 55px;
 }
 
@@ -79,6 +81,7 @@ body {
 .user {
   display: flex;
   margin-top: auto;
+  margin-bottom: 78px;
 }
 
 .user__info {
@@ -104,7 +107,8 @@ body {
 /* MAIN CONTENT */
 
 .right {
-  width: 968px;
+  margin-bottom: 150px;
+  width: 67.222%;
 }
 
 .header {
@@ -173,7 +177,18 @@ body {
 
 /* TABLE */
 
+.table-wrapper {
+  line-height: 1.5;
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+  border-collapse: collapse;
+  width: 100%;
+}
+
 .customers__table {
+  border-collapse: collapse;
+  width: 100%;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
@@ -187,12 +202,77 @@ body {
   line-height: 21px;
   letter-spacing: -0.01em;
   color: #b5b7c0;
+  border-bottom: 1px solid #eeeeee;
 }
 
-.table__row{
-  border-bottom: 1px solid #EEEEEE;
+.table__th {
+  text-align: left;
+  padding-bottom: 14px;
+  padding-right: 42px;
 }
 
-.table__col{
+.table__col {
+  vertical-align: middle;
+  padding: 20px 0;
   padding-right: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.table__th:last-child {
+  text-align: center;
+}
+
+/* PAGINATION */
+
+.customers__pagination {
+  padding-top: 25px;
+  padding-bottom: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pagination__info {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.01em;
+  color: #b5b7c0;
+}
+
+.pagination__list {
+  display: flex;
+  align-items: center;
+}
+
+.pagination__item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  color: #404b52;
+  width: 25px;
+  height: 25px;
+  background: #f5f5f5;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+}
+
+.pagination__item:not(:last-child) {
+  margin-right: 9px;
+}
+
+.pagination__item:hover {
+  background-color: #62529a;
+  color: #fff;
+}
+
+.pagination__item--active {
+  border: 1px solid #5932ea;
+  background-color: #5932ea;
+  color: #fff;
 }

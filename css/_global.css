@@ -79,6 +79,7 @@ img {
 }
 
 .status__button--active {
+  color: #008767;
   background-color: rgba(22, 192, 152, 0.38);
   border: 1px solid #00b087;
 }
